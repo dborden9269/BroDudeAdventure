@@ -4,69 +4,54 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
 
-public class BroDude
-{
-int x;
-int changeX;
-int y;
-int changeY;
-Image still;
-ImageIcon right = new ImageIcon("BroDudeCharacterArrowRight.png");
-ImageIcon left = new ImageIcon("BroDudeCharacterArrowLeft.png");
+public class BroDude {
+	
+	int x, changeX;
+	int y, changeY;
 
-	public BroDude()
-	{
-		
+	Image still;
+	ImageIcon right = new ImageIcon("src/data/BroDudeCharacterArrowRight.png");
+	ImageIcon left = new ImageIcon("src/data/BroDudeCharacterArrowLeft.png");
+
+	public BroDude() {
 		still = right.getImage();
 		x = 10;
 		y = 570;
-		
 	}
 	
-	public void move()
-	{
+	public void move() {
 		x = x + changeX;
 		y = y + changeY;
-		
 	}
-	
-	public int getX()
-	{
+
+	public int getX() {
 		return x;
 	}
 	
-	public int getY()
-	{
+	public int getY() {
 		return y;
 	}
 	
-	public Image getImage()
-	{
+	public Image getImage() {
 		return still;
 	}
 	
 	
-	public void keyPressed(KeyEvent e)
-	{
+	public void keyPressed(KeyEvent e) {
 		int key = e.getKeyCode();
 		
-		if (key == KeyEvent.VK_LEFT)
-		{
+		if (key == KeyEvent.VK_LEFT) {
 			changeX = -1;
 			still = left.getImage();
 		}
 		
-		if (key == KeyEvent.VK_RIGHT)
-		{
+		if (key == KeyEvent.VK_RIGHT) {
 			changeX = 1;
 			still = right.getImage();
 		}
-		
-
 	}
 	
-	public void keyReleased(KeyEvent e)
-	{
+	public void keyReleased(KeyEvent e) {
 		int key = e.getKeyCode();
 		
 		if (key == KeyEvent.VK_LEFT)
@@ -74,7 +59,6 @@ ImageIcon left = new ImageIcon("BroDudeCharacterArrowLeft.png");
 		
 		if (key == KeyEvent.VK_RIGHT)
 		changeX = 0;
-	
 	}
 }
 
