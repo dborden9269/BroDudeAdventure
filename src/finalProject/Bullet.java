@@ -12,8 +12,6 @@ public class Bullet
 	boolean visible;
 	int speedX = 7;
 	
-	
-
 	public Bullet(int startX, int startY)
 	{
 		x = startX;

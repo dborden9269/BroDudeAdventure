@@ -10,6 +10,10 @@ import java.util.ArrayList;
 
 	public class GameWorld extends JPanel implements ActionListener
 	{
+		/**
+		 * 
+		 */
+		private static final long	serialVersionUID	= 1L;
 		BroDude player;
 		public Image img;
 		Timer time;
